@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+<section>
+  <div class="container">
+    <div class="brand-title">SIGN UP</div>
+    <div class="inputs">
+        <form>
+            <label> FIRST NAME </label>
+            <input id="0" type="text" name="name">
+            <span id="nameValid"></span>
+            <label> LAST NAME </label>
+            <input id="1" type="text" name="name">
+            <span id="nameValid"></span>
+            <label>EMAIL </label>
+            <input id="2" type="email" name="email">
+            <span id="emailValid"></span>
+            <label>PASSWORD</label>
+            <input id="3" type="password" placeholder="Min 6 charaters long" name="password">
+            <span id="newPassValid"></span>
+            <label for="">CONFIRM PASSWORD</label>
+            <input id="4" type="password" name="confirm-password">
+            <span id="confirmPassValid"></span>
+            <div class="buttons">
+                <button  id="signupBtn" type="button">SIGN UP</button>
+                <button onclick="signinBtn()" type="button">SIGN IN </button>
+            </div>
+        </form>
+        <p id="sucessfullyAdded"></p>
+    </div>
+</div>
+</section>
+<script src="https://kit.fontawesome.com/44c4ed4e83.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

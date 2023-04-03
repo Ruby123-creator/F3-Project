@@ -1,0 +1,182 @@
+/* Write your styles here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+
+input {
+    caret-color: red;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ecf0f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+    overflow: hidden;
+    font-family: poppins;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color:rgb(223, 235, 235);
+    z-index: 1000;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    line-height: 0.8rem;
+  
+   
+  }
+  #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #header .left-part{
+    display: flex;
+    width: 50%;
+  }
+  
+    
+  
+    .icon{
+      display: none;
+    }
+
+.container {
+    /* margin-top: 100px; */
+    position: relative;
+    width: 350px;
+    height: 600px;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.brand-title {
+    /* margin-top: 5px; */
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #1da1f2;
+    letter-spacing: 1px;
+}
+
+.inputs {
+    text-align: left;
+    margin-top: 15px;
+}
+
+label,
+input{
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+button{
+    display: inline;
+    width: 40%;
+    padding: 0;
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+.buttons{
+    display: flex;
+}
+label {
+    margin-bottom: 4px;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+input {
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+button {
+    color: white;
+    margin-top: 10px;
+    background: #1da1f2;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+}
+#sucessfullyAdded{
+    margin-top: 5px;
+}
+button:hover {
+    box-shadow: none;
+}
+/* 
+a {
+    position: absolute;
+    font-size: 8px;
+    bottom: 4px;
+    right: 4px;
+    text-decoration: none;
+    color: black;
+    background: yellow;
+    border-radius: 10px;
+    padding: 2px;
+} */
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+ul li{
+    padding: 0 20px ;
+    list-style: none;
+    position: relative;
+  }
+  ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+     color: rgb(33, 33, 33);
+     transition: 0.3s ease;
+  }
+  ul li a:hover,
+  ul li a.active{
+    color:#088178;
+  }
+  
+  ul li a.active::after,
+  li a:hover::after{
+    content: "";
+    width: 30%;
+    height:2px;
+    background: #088178;
+    position: absolute;
+    left: 20px;
+    bottom: -4px;
+  }

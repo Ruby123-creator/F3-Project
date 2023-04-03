@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>MeShop.</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+
+  </head>
+  <body>
+    <section id="header">
+      <div class="left-part">
+          <a href=""><img src="logo.png" alt=""></a>
+      </div>
+      <div class="right-part">
+          <button class="icon" onclick="navbar()"><i class="fa-solid fa-bars"></i></button>
+          <ul id="navbar" class="topnav">
+              <li><button class="icon" id="close" onclick="close() "><i class="fa-solid fa-xmark"></i></button>
+              </li>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><button><a href="profile/login.html" id="loginbtn" onclick="loginbtn()">Login</a></button></li>
+              <li><a href="profile/index.html">Sign Up</a></li>
+              
+              <li><a id="cartbtn"><i class="fa-solid fa-bag-shopping"></i>
+                  </a></li>
+
+          </ul>
+      </div>
+  </section>
+<section id="hero">
+  <div class="container1">
+   <div class="heading">
+    <div class="info">
+      <a><img src="logo.png" alt=""></a>
+       <p>Your First Shop built on HTML ,CSS and Javascript</p>
+    </div>
+    <div class="btn">
+<button class="normal" onclick="loginbtn()" >Login</button>
+      <a href="profile/index.html"><button class="normal" >Signup</button></a>
+    </div>
+   </div>
+   
+  </div>
+  
+</section>
+<script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/44c4ed4e83.js" crossorigin="anonymous"></script>
+  </body>
+</html>

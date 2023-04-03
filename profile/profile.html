@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        input{
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  <body>
+    <section id="header">
+        <div class="left-part">
+            <a href=""><img src="../logo.png" alt=""></a>
+        </div>
+        <div class="right-part">
+            <button class="icon" onclick="navbar()"><i class="fa-solid fa-bars"></i></button>
+            <ul id="navbar" class="topnav">
+                <li><button class="icon" id="close" onclick="close() "><i class="fa-solid fa-xmark"></i></button>
+                </li>
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="index.html">Sign Up</a></li>
+                
+                <li><a href="../cart/index.html" class="active"><i class="fa-solid fa-bag-shopping"></i>
+                    </a></li>
+  
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <div class="brand-title">MY PROFILE</div>
+        <div class="inputs">
+            <form>
+                
+                <input id="0" type="text" name="name" placeholder="First Name">
+                <span id="nameValid"></span>
+                <input id="1" type="text" name="name" placeholder="Last Name">
+                <span id="nameValid"></span>
+                
+                <input id="2" type="password" name="email" placeholder="Old Password">
+                <span id="passwordValid"></span>
+                
+                <input id="3" type="password" placeholder=" New Password" name="password">
+                <span id="newPassValid"></span>
+                
+                <input id="4" type="password" name="confirm-password" placeholder="Confirm-Password">
+                <span id="confirmPassValid"></span>
+                <div class="buttons">
+                    <button onclick="check()"  id="signupBtn" type="button">Save Info</button>
+                    <button onclick="signinBtn()" type="button">Log Out </button>
+                </div>
+            </form>
+            <p id="match"></p>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/44c4ed4e83.js" crossorigin="anonymous"></script>
+
+    <script>
+      // Show Modal
+      
+      let input_fields = document.querySelectorAll("input");
+      console.log(input_fields)
+      let spans = document.querySelector("span");
+
+      let data = JSON.parse(localStorage.getItem("currentUser"));
+      
+      let isnewPasswordValid = false;
+      input_fields[3].addEventListener("input", valid_password);
+      function check() {
+        if (
+          input_fields[2].value != "" &&
+          data.password == input_fields[2].value && isnewPasswordValid
+        ) {
+           
+          document.getElementById("match").innerText =
+            "Successfully Password Change";
+            data.password = input_fields[3].value;
+            localStorage.setItem("currentUser" ,JSON.stringify(data));
+        }
+        else{
+            document.getElementById("match").innerText =
+            "Check Your Password or new Password is invalid";
+        }
+      }
+
+      function valid_password() {
+        let passFormat =
+          /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,15}$/;
+        if (input_fields[3].value.match(passFormat)&&input_fields[4].value===input_fields[3].value) {
+          spans.innerHTML = "Valid";
+          spans.style.color = "green";
+          isnewPasswordValid = true
+        } else {
+          spans.innerHTML = "Invalid";
+          spans.style.color = "red";
+        }
+      }
+
+      function logout(){
+        console.log("hello")
+         localStorage.setItem("currentUser" ,"null" );
+         window.location.href = "login.html"
+      }
+    </script>
+  </body>
+</html>

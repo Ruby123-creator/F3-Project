@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    
+  <section id="header">
+    <div class="left-part">
+        <a href=""><img src="../logo.png" alt=""></a>
+    </div>
+    <div class="right-part">
+        <button class="icon" onclick="navbar()"><i class="fa-solid fa-bars"></i></button>
+        <ul id="navbar" class="topnav">
+            <li><button class="icon" id="close" onclick="close() "><i class="fa-solid fa-xmark"></i></button>
+            </li>
+            <li><a href="../index.html">Home</a></li>
+            
+            <li><a href="../shop/index.html">Shop</a></li>
+            <li><a href="" class="active"><i class="fa-solid fa-bag-shopping"></i>
+                </a></li>
+
+        </ul>
+    </div>
+</section>
+    <section id="page-header" class="blog-page section-p1" >
+        <h2 style="text-align: center;">My Shopping</h2>
+        
+    </section>
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>SubTotal</td>
+                    <td>Buy the product</td>
+                </tr>
+            </thead>
+            <tbody id="cart-item">
+
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+    <script src="https://kit.fontawesome.com/44c4ed4e83.js" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
